@@ -1,6 +1,6 @@
 {
   "name": "cypress-brave",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Easy integration of brave browser with Cypress",
   "main": "src/index.mjs",
   "types": "src/index.d.ts",
