@@ -7,34 +7,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Run Cypress tests
-        uses: cypress-io/github-action@v4
-
-  test-cypress-v9:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Install top dependencies
-        uses: cypress-io/github-action@v4
+      - name: Run unit tests
+        uses: actions/setup-node@v3
         with:
-          runTests: false
-
-      - name: Run Cypress v9 tests
-        uses: cypress-io/github-action@v4
-        with:
-          runTests: false
-
-      - name: Store any v9 screenshots
-        uses: actions/upload-artifact@v2
-        if: failure()
-        with:
-          name: cypress-screenshots-v9
-          path: cypress-v9/cypress/screenshots
+          node-version: 16
+      - run: npm run test
 
   release:
-    needs: [test, test-cypress-v9]
+    needs: [test]
     runs-on: ubuntu-20.04
     if: github.ref == 'refs/heads/main'
     steps:
