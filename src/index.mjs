@@ -2,6 +2,7 @@ import {execa} from "execa";
 
 const braveBrowser = () => {
     // the path is hard-coded for simplicity
+    // TODO: add support for windows and linux
     const browserPath =
         '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser'
 
