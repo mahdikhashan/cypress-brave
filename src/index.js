@@ -1,4 +1,4 @@
-const execa = require('execa')
+import {execa} from "execa";
 
 const braveBrowser = () => {
     // the path is hard-coded for simplicity
@@ -22,4 +22,4 @@ const braveBrowser = () => {
     })
 }
 
-module.exports = braveBrowser;
+export default braveBrowser;
