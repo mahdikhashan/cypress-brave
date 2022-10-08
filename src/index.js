@@ -1,4 +1,4 @@
-import execa from "execa"
+const execa = require('execa')
 
 const braveBrowser = () => {
     // the path is hard-coded for simplicity

@@ -4,7 +4,7 @@
   "description": "Easy integration of brave browser with Cypress",
   "main": "src/index.js",
   "types": "src/index.d.ts",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "test": "echo tests passed",
     "badges": "npx -p dependency-version-badge update-badge cypress",
