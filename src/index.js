@@ -22,4 +22,4 @@ const braveBrowser = () => {
     })
 }
 
-export default braveBrowser;
+module.exports = braveBrowser;
